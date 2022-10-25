@@ -52,7 +52,7 @@ const verGrupos = () => {
 // criar cards de grupos de selecoes
 const criarCards = () => {
   // criar a estrutura do html e usar a clonagem
-  let listaDeGrupo = document.querySelector(".listaDoGrupo").cloneNode(true);
+  let listaDeGrupo = document.querySelector(".groupList").cloneNode(true);
   // usar o append
   document.querySelector(".listas").append(listaDeGrupo);
 };
@@ -66,15 +66,15 @@ const preencherDadosNosCards = (grupo, index) => {
   let [bandeira3, pais3] = selecao3;
   let [bandeira4, pais4] = selecao4;
 
-  let tituloDoGrupo = document.querySelectorAll(".tituloDoGrupo");
+  let groupTitle = document.querySelectorAll(".groupTitle");
   let listaDeSelecoes = document.querySelectorAll(".listaDeSelecoes");
 
-  tituloDoGrupo[index].innerHTML = `Grupo ${ogrupo}`;
+  groupTitle[index].innerHTML = `Grupo ${ogrupo}`;
   listaDeSelecoes[index].innerHTML = `
-    <li><img class='bandeirap' src='./images/bandeiras/${bandeira1}' alt='bandeira' /> ${pais1}</li>
-    <li><img class='bandeirap' src='./images/bandeiras/${bandeira2}' alt='bandeira' /> ${pais2}</li>
-    <li><img class='bandeirap' src='./images/bandeiras/${bandeira3}' alt='bandeira' /> ${pais3}</li>
-    <li><img class='bandeirap' src='./images/bandeiras/${bandeira4}' alt='bandeira' /> ${pais4}</li>`;
+    <li><img class='groupLogo' src='./images/bandeiras/${bandeira1}' alt='bandeira' /> ${pais1}</li>
+    <li><img class='groupLogo' src='./images/bandeiras/${bandeira2}' alt='bandeira' /> ${pais2}</li>
+    <li><img class='groupLogo' src='./images/bandeiras/${bandeira3}' alt='bandeira' /> ${pais3}</li>
+    <li><img class='groupLogo' src='./images/bandeiras/${bandeira4}' alt='bandeira' /> ${pais4}</li>`;
 };
 
 // executar verGrupos para criar os cards / section dos grupos e preencher os dados
@@ -89,9 +89,9 @@ const listarJogos = (url) => {
 
 // cards das fase de grupos
 const criarCardJogo = () => {
-  let listaDeJogos = document.querySelector(".listaDeJogos").cloneNode(true);
-  document.querySelector(".tableOfGames").append(listaDeJogos);
-  return listaDeJogos;
+  let gameList = document.querySelector(".gameList").cloneNode(true);
+  document.querySelector(".gamesTable").append(gameList);
+  return gameList;
 };
 
 const preencherCardJogos = (lista, jogo, indice) => {
@@ -101,9 +101,9 @@ const preencherCardJogos = (lista, jogo, indice) => {
   ).innerHTML = `${jogo.diaSemana} ${jogo.data} às ${jogo.hora}`;
   lista[indice].querySelector(
     ".partida"
-  ).innerHTML = `<img class="bandeirap" src="./images/bandeiras/${jogo.mandante}" alt="" />
+  ).innerHTML = `<img class="groupLogo" src="./images/bandeiras/${jogo.mandante}" alt="" />
     ${jogo.partida}
-    <img class="bandeirap" src="./images/bandeiras/${jogo.visitante}" alt="" />`;
+    <img class="groupLogo" src="./images/bandeiras/${jogo.visitante}" alt="" />`;
   lista[indice].querySelector(".estadio").innerHTML = `${jogo.estadio}`;
 };
 
@@ -150,9 +150,9 @@ const preencherCardJogosFinais = (lista, jogo, indice) => {
   ).innerHTML = `${jogo.diaSemana} ${jogo.data} às ${jogo.hora}`;
   lista[indice].querySelector(
     ".partida"
-  ).innerHTML = `<img class="bandeirap" src="./images/bandeiras/${jogo.mandante}" alt="" />
+  ).innerHTML = `<img class="groupLogo" src="./images/bandeiras/${jogo.mandante}" alt="" />
     ${jogo.partida}
-    <img class="bandeirap" src="./images/bandeiras/${jogo.visitante}" alt="" />`;
+    <img class="groupLogo" src="./images/bandeiras/${jogo.visitante}" alt="" />`;
   lista[indice].querySelector(".estadio").innerHTML = `${jogo.estadio}`;
 };
 
@@ -161,8 +161,8 @@ let numeroDeJogosFinais = 16;
 let cardsJogosFinais = [];
 for (let i = 0; i < numeroDeJogosFinais; i++) {
   cardsJogosFinais[i] = criarCard(
-    ".listaDeJogosFinais",
-    ".tableOfGamesFinals"
+    ".gameFinals",
+    ".gamesTableFinals"
   );
 }
 //console.log(cardsJogosFinais)

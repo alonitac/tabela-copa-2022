@@ -106,7 +106,7 @@ nav {
 }
 
 /* main .tela-principal */
-.telaPrincipal {
+.mainSection {
   padding: 0 6rem 3rem;
 }
 
@@ -116,7 +116,7 @@ nav {
 
 /* section */
 .grupos,
-.listaDoGrupo {
+.groupList {
   display: flex;
   flex-direction: column;
 
@@ -126,7 +126,7 @@ nav {
   border-radius: 0.5rem;
 }
 
-.bandeirap {
+.groupLogo {
   width: 50px;
   border-radius: 0.5rem;
   -webkit-user-drag: none;
@@ -185,8 +185,8 @@ footer {
   }
 }
 
-/* div de modelo para exibir cada grupo */
-.modelo {
+/* div de model para exibir cada grupo */
+.model {
   display: none;
 }
 
@@ -235,8 +235,8 @@ footer {
 }
 
 /* tabela de jogos */
-.tableOfGames,
-.tableOfGamesFinals {
+.gamesTable,
+.gamesTableFinals {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 2rem;
@@ -244,8 +244,8 @@ footer {
   margin-bottom: 50px;
 }
 
-.listaDeJogos,
-.listaDeJogosFinais {
+.gameList,
+.gameFinals {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,7 +296,7 @@ h3 a {
 }
 
 @media (max-width: 800px) {
-  .telaPrincipal {
+  .mainSection {
     padding: 0 2rem 2rem;
   }
 
