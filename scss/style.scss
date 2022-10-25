@@ -110,7 +110,7 @@ nav {
   padding: 0 6rem 3rem;
 }
 
-#divGrupo {
+#divGroup {
   margin-bottom: 60px;
 }
 
@@ -235,8 +235,8 @@ footer {
 }
 
 /* tabela de jogos */
-.tabelaDeJogos,
-.tabelaDeJogosFinais {
+.tableOfGames,
+.tableOfGamesFinals {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 2rem;

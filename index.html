@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.png" />
-    <title>Copa do Mundo 2022</title>
+    <title>World Cup 2022</title>
     <link rel="stylesheet" href="css/style.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -22,37 +22,32 @@
             </div>
             <nav>
                 <ul class="menu">
-                    <li><a id="btnGrupos" class="" onClick="">Grupos</a></li>
+                    <li><a id="btnGroups" class="" onClick="">Groups</a></li>
                     <li><a class="" onClick="renderizarJogos(1)">1ª</a></li>
                     <li><a class="" onClick="renderizarJogos(2)">2ª</a></li>
                     <li><a class="" onClick="renderizarJogos(3)">3ª</a></li>
-                    <li><a class="" onClick="renderizarFinais('finais')">Eliminatórias</a></li>
+                    <li><a class="" onClick="renderizarFinais('finais')">Finals</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div id="divGrupo">
-            <h2>Grupos</h2>
-            <!-- preenchida pelo js listas das selecoes por grupo -->
+        <div id="divGroup">
+            <h2>Groups</h2>
             <section class="listas"></section>
         </div>
 
-        <h2>Tabela de Jogos</h2>
+        <h2>Table of Games</h2>
 
-        <div id="divRodadas" class="div">
+        <div id="divRounds" class="div">
             <h3><span class="rodada"></span></h3>
-            <!-- fase de grupos 1, 2, 3 rodada -->
-            <section class="tabelaDeJogos"></section>
+            <section class="tableOfGames"></section>
         </div>
 
-        <div id="divFinais" class="div">
-            <h3>Fases Finais</h3>
-            <!-- fases finais -->
-            <section class="tabelaDeJogosFinais"></section>
+        <div id="divFinals" class="div">
+            <h3>Final Phases</h3>
+            <section class="tableOfGamesFinals"></section>
         </div>
-        <!-- /preenchida pelo js  -->
 
-        <!-- modelos de listaDoGrupo -->
         <div class="modelo">
             <section class="listaDoGrupo">
                 <h3 class="tituloDoGrupo">Grupo</h3>
@@ -67,9 +62,7 @@
                         Nome da Seleção 4</li>
                 </ol>
             </section>
-            <!-- /modelo de listaDeGrupos -->
 
-            <!-- modelo .listaDejogos -->
             <section class="listaDeJogos">
                 <article class="jogo">
                     <h3 class="grupo"></h3>
@@ -79,7 +72,6 @@
                 </article>
             </section>
 
-            <!-- modelo .listaDejogosFinais -->
             <section class="listaDeJogosFinais">
                 <article class="jogo">
                     <h3 class="fase"></h3>

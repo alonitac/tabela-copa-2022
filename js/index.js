@@ -21,9 +21,9 @@ document.querySelector("#irTopo").addEventListener("click", () =>
   })
 );
 
-// botao btnGrupos mostrar/ocultar divGrupos
-document.querySelector("#btnGrupos").addEventListener("click", () => {
-  document.querySelector("#divGrupo").classList.toggle("ocultar");
+// botao btnGroups mostrar/ocultar divGroups
+document.querySelector("#btnGroups").addEventListener("click", () => {
+  document.querySelector("#divGroup").classList.toggle("ocultar");
 });
 
 const ocultar = (elemento) => {
@@ -90,7 +90,7 @@ const listarJogos = (url) => {
 // cards das fase de grupos
 const criarCardJogo = () => {
   let listaDeJogos = document.querySelector(".listaDeJogos").cloneNode(true);
-  document.querySelector(".tabelaDeJogos").append(listaDeJogos);
+  document.querySelector(".tableOfGames").append(listaDeJogos);
   return listaDeJogos;
 };
 
@@ -108,9 +108,9 @@ const preencherCardJogos = (lista, jogo, indice) => {
 };
 
 const renderizarJogos = (url) => {
-  mostrar("#divRodadas");
-  ocultar("#divFinais");
-  ocultar("#divGrupo");
+  mostrar("#divRounds");
+  ocultar("#divFinals");
+  ocultar("#divGroup");
 
   listarJogos(url).then((dado) => {
     document.querySelector(".rodada").innerHTML = `${dado[0].rodada}ª rodada`;
@@ -162,15 +162,15 @@ let cardsJogosFinais = [];
 for (let i = 0; i < numeroDeJogosFinais; i++) {
   cardsJogosFinais[i] = criarCard(
     ".listaDeJogosFinais",
-    ".tabelaDeJogosFinais"
+    ".tableOfGamesFinals"
   );
 }
 //console.log(cardsJogosFinais)
 
 const renderizarFinais = (url) => {
-  mostrar("#divFinais");
-  ocultar("#divRodadas");
-  ocultar("#divGrupo");
+  mostrar("#divFinals");
+  ocultar("#divRounds");
+  ocultar("#divGroup");
 
   listarJogos(url).then((dado) => {
     dado.map((jogo, indice) => {
