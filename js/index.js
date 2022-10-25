@@ -80,7 +80,7 @@ const createGameCard = () => {
 };
 
 const createGameCard_ = (list, game, index) => {
-  list[index].querySelector(".group").innerHTML = `Group ${game.group}`; // muda nas rounds finais
+  list[index].querySelector(".group").innerHTML = `Group ${game.group}`;
   list[index].querySelector(
     ".data"
   ).innerHTML = `${game.dayweek} ${game.data} at ${game.hour}`;
@@ -124,7 +124,7 @@ const createCard = (element, local) => {
 };
 
 const fillCardGamesFinals = (list, game, index) => {
-  list[index].querySelector(".fase").innerHTML = `${game.round}`; // muda nas rounds finais
+  list[index].querySelector(".fase").innerHTML = `${game.round}`;
   list[index].querySelector(
     ".data"
   ).innerHTML = `${game.dayweek} ${game.data} at ${game.hour}`;
