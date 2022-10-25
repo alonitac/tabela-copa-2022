@@ -2,7 +2,7 @@
   {
     "id": 17,
     "grupo": "A",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SEX",
     "data": "25/11/2022",
     "hora": "10:00",
@@ -14,7 +14,7 @@
   {
     "id": 18,
     "grupo": "A",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SEX",
     "data": "25/11/2022",
     "hora": "13:00",
@@ -26,7 +26,7 @@
   {
     "id": 19,
     "grupo": "B",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SEX",
     "data": "25/11/2022",
     "hora": "07:00",
@@ -38,7 +38,7 @@
   {
     "id": 20,
     "grupo": "B",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SEX",
     "data": "25/11/2022",
     "hora": "16:00",
@@ -50,7 +50,7 @@
   {
     "id": 21,
     "grupo": "C",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SÁB",
     "data": "26/11/2022",
     "hora": "10:00",
@@ -62,7 +62,7 @@
   {
     "id": 22,
     "grupo": "C",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SÁB",
     "data": "26/11/2022",
     "hora": "16:00",
@@ -74,7 +74,7 @@
   {
     "id": 23,
     "grupo": "D",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SÁB",
     "data": "26/11/2022",
     "hora": "07:00",
@@ -86,7 +86,7 @@
   {
     "id": 24,
     "grupo": "D",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SÁB",
     "data": "26/11/2022",
     "hora": "13:00",
@@ -98,7 +98,7 @@
   {
     "id": 25,
     "grupo": "E",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "DOM",
     "data": "27/11/2022",
     "hora": "07:00",
@@ -110,7 +110,7 @@
   {
     "id": 26,
     "grupo": "E",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "DOM",
     "data": "27/11/2022",
     "hora": "16:00",
@@ -122,7 +122,7 @@
   {
     "id": 27,
     "grupo": "F",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "DOM",
     "data": "27/11/2022",
     "hora": "10:00",
@@ -134,7 +134,7 @@
   {
     "id": 28,
     "grupo": "F",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "DOM",
     "data": "27/11/2022",
     "hora": "13:00",
@@ -146,7 +146,7 @@
   {
     "id": 29,
     "grupo": "G",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SEG",
     "data": "28/11/2022",
     "hora": "07:00",
@@ -158,7 +158,7 @@
   {
     "id": 30,
     "grupo": "G",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SEG",
     "data": "28/11/2022",
     "hora": "13:00",
@@ -170,7 +170,7 @@
   {
     "id": 31,
     "grupo": "H",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SEG",
     "data": "28/11/2022",
     "hora": "10:00",
@@ -182,7 +182,7 @@
   {
     "id": 32,
     "grupo": "H",
-    "rodada": 2,
+    "round": 2,
     "diaSemana": "SEG",
     "data": "28/11/2022",
     "hora": "16:00",

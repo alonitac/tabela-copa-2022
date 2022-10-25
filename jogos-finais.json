@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "rodada": "Oitavas de final 1",
+    "round": "Oitavas de final 1",
     "diaSemana": "SÁB",
     "data": "03/12/2022",
     "hora": "12:00",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "rodada": "Oitavas de final 2",
+    "round": "Oitavas de final 2",
     "diaSemana": "SÁB",
     "data": "03/12/2022",
     "hora": "16:00",
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "rodada": "Oitavas de final 3",
+    "round": "Oitavas de final 3",
     "diaSemana": "SEG",
     "data": "05/12/2022",
     "hora": "12:00",
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "rodada": "Oitavas de final 4",
+    "round": "Oitavas de final 4",
     "diaSemana": "SEG",
     "data": "05/12/2022",
     "hora": "16:00",
@@ -45,7 +45,7 @@
   },
   {
     "id": 5,
-    "rodada": "Oitavas de final 5",
+    "round": "Oitavas de final 5",
     "diaSemana": "DOM",
     "data": "04/12/2022",
     "hora": "16:00",
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "rodada": "Oitavas de final 6",
+    "round": "Oitavas de final 6",
     "diaSemana": "DOM",
     "data": "04/12/2022",
     "hora": "12:00",
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "rodada": "Oitavas de final 7",
+    "round": "Oitavas de final 7",
     "diaSemana": "TER",
     "data": "06/12/2022",
     "hora": "12:00",
@@ -78,7 +78,7 @@
   },
   {
     "id": 8,
-    "rodada": "Oitavas de final 8",
+    "round": "Oitavas de final 8",
     "diaSemana": "TER",
     "data": "06/12/2022",
     "hora": "16:00",
@@ -89,7 +89,7 @@
   },
   {
     "id": 9,
-    "rodada": "Quartas de final 1",
+    "round": "Quartas de final 1",
     "diaSemana": "SEX",
     "data": "09/12/2022",
     "hora": "16:00",
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "rodada": "Quartas de final 2",
+    "round": "Quartas de final 2",
     "diaSemana": "SEX",
     "data": "09/12/2022",
     "hora": "12:00",
@@ -111,7 +111,7 @@
   },
   {
     "id": 11,
-    "rodada": "Quartas de final 3",
+    "round": "Quartas de final 3",
     "diaSemana": "SÁB",
     "data": "10/12/2022",
     "hora": "16:00",
@@ -122,7 +122,7 @@
   },
   {
     "id": 12,
-    "rodada": "Quartas de final 4",
+    "round": "Quartas de final 4",
     "diaSemana": "SÁB",
     "data": "10/12/2022",
     "hora": "12:00",
@@ -133,7 +133,7 @@
   },
   {
     "id": 13,
-    "rodada": "Semi final 1",
+    "round": "Semi final 1",
     "diaSemana": "TER",
     "data": "13/12/2022",
     "hora": "16:00",
@@ -144,7 +144,7 @@
   },
   {
     "id": 14,
-    "rodada": "Semi final 2",
+    "round": "Semi final 2",
     "diaSemana": "QUA",
     "data": "14/12/2022",
     "hora": "16:00",
@@ -155,7 +155,7 @@
   },
   {
     "id": 15,
-    "rodada": "Terceiro lugar",
+    "round": "Terceiro lugar",
     "diaSemana": "SÁB",
     "data": "17/12/2022",
     "hora": "12:00",
@@ -166,7 +166,7 @@
   },
   {
     "id": 16,
-    "rodada": "Final",
+    "round": "Final",
     "diaSemana": "DOM",
     "data": "18/12/2022",
     "hora": "12:00",

@@ -44,7 +44,7 @@ const verGrupos = () => {
 
 const criarCards = () => {
   let listaDeGrupo = document.querySelector(".groupList").cloneNode(true);
-  document.querySelector(".listas").append(listaDeGrupo);
+  document.querySelector(".lists").append(listaDeGrupo);
 };
 
 const preencherDadosNosCards = (grupo, index) => {
@@ -80,7 +80,7 @@ const criarCardJogo = () => {
 };
 
 const preencherCardJogos = (lista, jogo, indice) => {
-  lista[indice].querySelector(".grupo").innerHTML = `Grupo ${jogo.grupo}`; // muda nas rodadas finais
+  lista[indice].querySelector(".grupo").innerHTML = `Grupo ${jogo.grupo}`; // muda nas rounds finais
   lista[indice].querySelector(
     ".data"
   ).innerHTML = `${jogo.diaSemana} ${jogo.data} às ${jogo.hora}`;
@@ -98,20 +98,20 @@ const renderGames = (url) => {
   ocultar("#divGroup");
 
   listarJogos(url).then((dado) => {
-    document.querySelector(".rodada").innerHTML = `${dado[0].rodada}ª rodada`;
+    document.querySelector(".round").innerHTML = `${dado[0].round}ª round`;
     dado.map((jogo, indice) => {
-      preencherCardJogos(cardsRodadas, jogo, indice);
+      preencherCardJogos(cardsrounds, jogo, indice);
     });
   });
 };
 
 let numeroDeJogos = 16;
-let cardsRodadas = [];
+let cardsrounds = [];
 
 for (let i = 0; i < numeroDeJogos; i++) {
-  cardsRodadas[i] = criarCardJogo();
+  cardsrounds[i] = criarCardJogo();
 }
-// console.log(cardsRodadas)
+// console.log(cardsrounds)
 
 renderGames(1);
 
@@ -125,7 +125,7 @@ const criarCard = (elemento, local) => {
 };
 
 const preencherCardJogosFinais = (lista, jogo, indice) => {
-  lista[indice].querySelector(".fase").innerHTML = `${jogo.rodada}`; // muda nas rodadas finais
+  lista[indice].querySelector(".fase").innerHTML = `${jogo.round}`; // muda nas rounds finais
   lista[indice].querySelector(
     ".data"
   ).innerHTML = `${jogo.diaSemana} ${jogo.data} às ${jogo.hora}`;
@@ -153,7 +153,7 @@ const renderFinals = (url) => {
 
   listarJogos(url).then((dado) => {
     dado.map((jogo, indice) => {
-      //preencherCardJogos(cardsRodadas, jogo, indice)
+      //preencherCardJogos(cardsrounds, jogo, indice)
       preencherCardJogosFinais(cardsJogosFinais, jogo, indice);
     });
   });
