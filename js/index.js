@@ -20,57 +20,57 @@ document.querySelector("#irTop").addEventListener("click", () =>
 );
 
 document.querySelector("#btnGroups").addEventListener("click", () => {
-  document.querySelector("#divGroup").classList.toggle("ocultar");
+  document.querySelector("#divGroup").classList.toggle("hide");
 });
 
-const ocultar = (elemento) => {
-  document.querySelector(elemento).classList.add("ocultar");
+const hide = (element) => {
+  document.querySelector(element).classList.add("hide");
 };
 
-const mostrar = (elemento) => {
-  document.querySelector(elemento).classList.remove("ocultar");
+const showInfo = (element) => {
+  document.querySelector(element).classList.remove("hide");
 };
 
-const verGrupos = () => {
-  fetch("./info-grupos.json")
-    .then((resposta) => resposta.json())
-    .then((dados) => {
-      dados.map((grupo, index) => {
-        criarCards();
-        preencherDadosNosCards(grupo, index);
+const showGroups = () => {
+  fetch("./info-groups.json")
+    .then((response) => response.json())
+    .then((data) => {
+      data.map((group, index) => {
+        createCards();
+        fillDataCard(group, index);
       });
     });
 };
 
-const criarCards = () => {
-  let listaDeGrupo = document.querySelector(".groupList").cloneNode(true);
-  document.querySelector(".lists").append(listaDeGrupo);
+const createCards = () => {
+  let groupList = document.querySelector(".groupList").cloneNode(true);
+  document.querySelector(".lists").append(groupList);
 };
 
-const preencherDadosNosCards = (grupo, index) => {
-  let { grupo: ogrupo, selecao1, selecao2, selecao3, selecao4 } = grupo;
-  let [bandeira1, pais1] = selecao1;
-  let [bandeira2, pais2] = selecao2;
-  let [bandeira3, pais3] = selecao3;
-  let [bandeira4, pais4] = selecao4;
+const fillDataCard = (group, index) => {
+  let { group: _group, selection1, selection2, selection3, selection4 } = group;
+  let [logo1, pair1] = selection1;
+  let [logo2, pair2] = selection2;
+  let [logo3, pair3] = selection3;
+  let [logo4, pair4] = selection4;
 
   let groupTitle = document.querySelectorAll(".groupTitle");
   let selectionList = document.querySelectorAll(".selectionList");
 
-  groupTitle[index].innerHTML = `Grupo ${ogrupo}`;
+  groupTitle[index].innerHTML = `Group ${_group}`;
   selectionList[index].innerHTML = `
-    <li><img class='groupLogo' src='./images/logos/${bandeira1}' /> ${pais1}</li>
-    <li><img class='groupLogo' src='./images/logos/${bandeira2}' /> ${pais2}</li>
-    <li><img class='groupLogo' src='./images/logos/${bandeira3}' /> ${pais3}</li>
-    <li><img class='groupLogo' src='./images/logos/${bandeira4}' /> ${pais4}</li>`;
+    <li><img class='groupLogo' src='./images/logos/${logo1}' /> ${pair1}</li>
+    <li><img class='groupLogo' src='./images/logos/${logo2}' /> ${pair2}</li>
+    <li><img class='groupLogo' src='./images/logos/${logo3}' /> ${pair3}</li>
+    <li><img class='groupLogo' src='./images/logos/${logo4}' /> ${pair4}</li>`;
 };
 
-verGrupos();
+showGroups();
 
 /////////////////////////// GAMES ///////////////////////////
 let url = "";
 const listarJogos = (url) => {
-  return fetch(`jogos-${url}.json`).then((resposta) => resposta.json());
+  return fetch(`jogos-${url}.json`).then((response) => response.json());
 };
 
 const criarCardJogo = () => {
@@ -93,9 +93,9 @@ const preencherCardJogos = (lista, jogo, indice) => {
 };
 
 const renderGames = (url) => {
-  mostrar("#divRounds");
-  ocultar("#divFinals");
-  ocultar("#divGroup");
+  showInfo("#divRounds");
+  hide("#divFinals");
+  hide("#divGroup");
 
   listarJogos(url).then((dado) => {
     document.querySelector(".round").innerHTML = `${dado[0].round}ª round`;
@@ -147,9 +147,9 @@ for (let i = 0; i < numeroDeJogosFinais; i++) {
 }
 
 const renderFinals = (url) => {
-  mostrar("#divFinals");
-  ocultar("#divRounds");
-  ocultar("#divGroup");
+  showInfo("#divFinals");
+  hide("#divRounds");
+  hide("#divGroup");
 
   listarJogos(url).then((dado) => {
     dado.map((jogo, indice) => {

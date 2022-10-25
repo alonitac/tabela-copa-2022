@@ -1,0 +1,58 @@
+[
+  {
+    "group": "A",
+    "selection1": ["catar.svg", "Catar", "CAT"],
+    "selection2": ["equador.svg", "Equador", "EQU"],
+    "selection3": ["senegal.svg", "Senegal", "SEN"],
+    "selection4": ["holanda.svg", "Holanda", "HOL"]
+  },
+  {
+    "group": "B",
+    "selection1": ["inglaterra.svg", "Inglaterra", "ING"],
+    "selection2": ["ira.svg", "Irã", "IRA"],
+    "selection3": ["estados_unidos.svg", "Estados Unidos", "EUA"],
+    "selection4": ["pais_de_gales.svg", "País de Gales", "GBR"]
+  },
+  {
+    "group": "C",
+    "selection1": ["arabia_saudita.svg", "Arábia Saudita", "ARA"],
+    "selection2": ["argentina.svg", "Argentina", "ARG"],
+    "selection3": ["mexico.svg", "México", "MEX"],
+    "selection4": ["polonia.svg", "Polônia", "POL"]
+  },
+  {
+    "group": "D",
+    "selection1": ["dinamarca.svg", "Dinamarca", "DIN"],
+    "selection2": ["australia.svg", "Austrália", "AUS"],
+    "selection3": ["franca.svg", "França", "FRA"],
+    "selection4": ["tunisia.svg", "Tunísia", "TUN"]
+  },
+  {
+    "group": "E",
+    "selection1": ["alemanha.svg", "Alemanha", "ALE"],
+    "selection2": ["costa_rica.svg", "Costa Rica", "CRI"],
+    "selection3": ["espanha.svg", "Espanha", "ESP"],
+    "selection4": ["japao.svg", "Japão", "JAP"]
+  },
+  {
+    "group": "F",
+    "selection1": ["belgica.svg", "Bélgica", "BEL"],
+    "selection2": ["canada.svg", "Canadá", "CAN"],
+    "selection3": ["croacia.svg", "Croácia", "CRO"],
+    "selection4": ["marrocos.svg", "Marrocos", "MAR"]
+  },
+  {
+    "group": "G",
+    "selection1": ["brasil.svg", "Brasil", "BRA"],
+    "selection2": ["camaroes.svg", "Camarões", "CAM"],
+    "selection3": ["servia.svg", "Sérvia", "SER"],
+    "selection4": ["suica.svg", "Suíça", "SUI"]
+  },
+  {
+    "group": "H",
+    "selection1": ["coreia_do_sul.svg", "Coreia do Sul", "COR"],
+    "selection2": ["gana.svg", "Gana", "GAN"],
+    "selection3": ["portugal.svg", "Portugal", "POR"],
+    "selection4": ["uruguai.svg", "Uruguai", "URU"]
+  }
+]
