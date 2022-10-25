@@ -198,7 +198,7 @@ footer {
   row-gap: 0.25rem;
 }
 
-.inferiorDireita {
+.topButton {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -224,7 +224,7 @@ footer {
   cursor: pointer;
 }
 
-.btnTopo {
+.btnTop {
   background: rgba(157, 12, 53, 0.5);
   color: #fff;
   font-size: 25px;
@@ -335,7 +335,7 @@ h3 a {
     margin: 3rem 1.2rem;
   }
 
-  .btnTopo {
+  .btnTop {
     font-size: 1.8rem;
   }
 }

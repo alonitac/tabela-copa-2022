@@ -1,4 +1,3 @@
-// Quando o usuário rolar a página, exiba barra de progresso
 window.onscroll = function () {
   myFunction();
 };
@@ -13,15 +12,13 @@ function myFunction() {
   document.querySelector(".indicator").style.width = scrolled + "%";
 }
 
-// botao irTopo
-document.querySelector("#irTopo").addEventListener("click", () =>
+document.querySelector("#irTop").addEventListener("click", () =>
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   })
 );
 
-// botao btnGroups mostrar/ocultar divGroups
 document.querySelector("#btnGroups").addEventListener("click", () => {
   document.querySelector("#divGroup").classList.toggle("ocultar");
 });
@@ -34,32 +31,23 @@ const mostrar = (elemento) => {
   document.querySelector(elemento).classList.remove("ocultar");
 };
 
-// requisicao dos dados json
 const verGrupos = () => {
   fetch("./info-grupos.json")
     .then((resposta) => resposta.json())
     .then((dados) => {
-      //console.log(dados)
-      // manipular os dados da requisicao
-      // mapear o array de dados
       dados.map((grupo, index) => {
         criarCards();
         preencherDadosNosCards(grupo, index);
-      }); // fim dados.map
-    }); // fim then
-}; // fim verGrupos
+      });
+    });
+};
 
-// criar cards de grupos de selecoes
 const criarCards = () => {
-  // criar a estrutura do html e usar a clonagem
   let listaDeGrupo = document.querySelector(".groupList").cloneNode(true);
-  // usar o append
   document.querySelector(".listas").append(listaDeGrupo);
 };
 
-// preencher dados nos cards
 const preencherDadosNosCards = (grupo, index) => {
-  // destruturacao do grupo e selecoes
   let { grupo: ogrupo, selecao1, selecao2, selecao3, selecao4 } = grupo;
   let [bandeira1, pais1] = selecao1;
   let [bandeira2, pais2] = selecao2;
@@ -67,27 +55,24 @@ const preencherDadosNosCards = (grupo, index) => {
   let [bandeira4, pais4] = selecao4;
 
   let groupTitle = document.querySelectorAll(".groupTitle");
-  let listaDeSelecoes = document.querySelectorAll(".listaDeSelecoes");
+  let selectionList = document.querySelectorAll(".selectionList");
 
   groupTitle[index].innerHTML = `Grupo ${ogrupo}`;
-  listaDeSelecoes[index].innerHTML = `
-    <li><img class='groupLogo' src='./images/bandeiras/${bandeira1}' alt='bandeira' /> ${pais1}</li>
-    <li><img class='groupLogo' src='./images/bandeiras/${bandeira2}' alt='bandeira' /> ${pais2}</li>
-    <li><img class='groupLogo' src='./images/bandeiras/${bandeira3}' alt='bandeira' /> ${pais3}</li>
-    <li><img class='groupLogo' src='./images/bandeiras/${bandeira4}' alt='bandeira' /> ${pais4}</li>`;
+  selectionList[index].innerHTML = `
+    <li><img class='groupLogo' src='./images/logos/${bandeira1}' /> ${pais1}</li>
+    <li><img class='groupLogo' src='./images/logos/${bandeira2}' /> ${pais2}</li>
+    <li><img class='groupLogo' src='./images/logos/${bandeira3}' /> ${pais3}</li>
+    <li><img class='groupLogo' src='./images/logos/${bandeira4}' /> ${pais4}</li>`;
 };
 
-// executar verGrupos para criar os cards / section dos grupos e preencher os dados
 verGrupos();
 
-/////////////////////////// JOGOS ///////////////////////////
+/////////////////////////// GAMES ///////////////////////////
 let url = "";
-// requisicao dos dados json
 const listarJogos = (url) => {
   return fetch(`jogos-${url}.json`).then((resposta) => resposta.json());
 };
 
-// cards das fase de grupos
 const criarCardJogo = () => {
   let gameList = document.querySelector(".gameList").cloneNode(true);
   document.querySelector(".gamesTable").append(gameList);
@@ -101,13 +86,13 @@ const preencherCardJogos = (lista, jogo, indice) => {
   ).innerHTML = `${jogo.diaSemana} ${jogo.data} às ${jogo.hora}`;
   lista[indice].querySelector(
     ".partida"
-  ).innerHTML = `<img class="groupLogo" src="./images/bandeiras/${jogo.mandante}" alt="" />
+  ).innerHTML = `<img class="groupLogo" src="./images/logos/${jogo.mandante}" alt="" />
     ${jogo.partida}
-    <img class="groupLogo" src="./images/bandeiras/${jogo.visitante}" alt="" />`;
+    <img class="groupLogo" src="./images/logos/${jogo.visitante}" alt="" />`;
   lista[indice].querySelector(".estadio").innerHTML = `${jogo.estadio}`;
 };
 
-const renderizarJogos = (url) => {
+const renderGames = (url) => {
   mostrar("#divRounds");
   ocultar("#divFinals");
   ocultar("#divGroup");
@@ -115,13 +100,11 @@ const renderizarJogos = (url) => {
   listarJogos(url).then((dado) => {
     document.querySelector(".rodada").innerHTML = `${dado[0].rodada}ª rodada`;
     dado.map((jogo, indice) => {
-      // criando os cards
       preencherCardJogos(cardsRodadas, jogo, indice);
     });
   });
 };
 
-// criar cards para fase de grupo
 let numeroDeJogos = 16;
 let cardsRodadas = [];
 
@@ -130,13 +113,11 @@ for (let i = 0; i < numeroDeJogos; i++) {
 }
 // console.log(cardsRodadas)
 
-// renderizando a nossa tela 1ª rodada
-renderizarJogos(1);
+renderGames(1);
 
-//// /RODADAS ////
+///// ROUNDS ////
 
-////////// FASES ELIMINATORIAS /////////////
-// clonar elemento e colocar no local
+////////// FINALS /////////////
 const criarCard = (elemento, local) => {
   let card = document.querySelector(elemento).cloneNode(true);
   document.querySelector(local).append(card);
@@ -150,13 +131,12 @@ const preencherCardJogosFinais = (lista, jogo, indice) => {
   ).innerHTML = `${jogo.diaSemana} ${jogo.data} às ${jogo.hora}`;
   lista[indice].querySelector(
     ".partida"
-  ).innerHTML = `<img class="groupLogo" src="./images/bandeiras/${jogo.mandante}" alt="" />
+  ).innerHTML = `<img class="groupLogo" src="./images/logos/${jogo.mandante}" alt="" />
     ${jogo.partida}
-    <img class="groupLogo" src="./images/bandeiras/${jogo.visitante}" alt="" />`;
+    <img class="groupLogo" src="./images/logos/${jogo.visitante}" alt="" />`;
   lista[indice].querySelector(".estadio").innerHTML = `${jogo.estadio}`;
 };
 
-// criar cards para fases finais
 let numeroDeJogosFinais = 16;
 let cardsJogosFinais = [];
 for (let i = 0; i < numeroDeJogosFinais; i++) {
@@ -165,9 +145,8 @@ for (let i = 0; i < numeroDeJogosFinais; i++) {
     ".gamesTableFinals"
   );
 }
-//console.log(cardsJogosFinais)
 
-const renderizarFinais = (url) => {
+const renderFinals = (url) => {
   mostrar("#divFinals");
   ocultar("#divRounds");
   ocultar("#divGroup");
@@ -180,4 +159,3 @@ const renderizarFinais = (url) => {
   });
 };
 
-//renderizarFinais('oitavas')
