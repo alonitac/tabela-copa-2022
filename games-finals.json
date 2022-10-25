@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "round": "Oitavas de final 1",
+    "dayweek": "SÁB",
+    "data": "03/12/2022",
+    "hour": "12:00",
+    "stadium": "INTERNACIONAL KHALIFA",
+    "match": "1A x 2B",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 2,
+    "round": "Oitavas de final 2",
+    "dayweek": "SÁB",
+    "data": "03/12/2022",
+    "hour": "16:00",
+    "stadium": "AL RAYYAN",
+    "match": "1C x 2D",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 3,
+    "round": "Oitavas de final 3",
+    "dayweek": "SEG",
+    "data": "05/12/2022",
+    "hour": "12:00",
+    "stadium": "AL WAKRAH",
+    "match": "1E x 2F",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 4,
+    "round": "Oitavas de final 4",
+    "dayweek": "SEG",
+    "data": "05/12/2022",
+    "hour": "16:00",
+    "stadium": "PORTO DE DOHA",
+    "match": "1G x 2H",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 5,
+    "round": "Oitavas de final 5",
+    "dayweek": "DOM",
+    "data": "04/12/2022",
+    "hour": "16:00",
+    "stadium": "AL KHOR",
+    "match": "1B x 2A",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 6,
+    "round": "Oitavas de final 6",
+    "dayweek": "DOM",
+    "data": "04/12/2022",
+    "hour": "12:00",
+    "stadium": "AL THUMAMA",
+    "match": "1D x 2C",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 7,
+    "round": "Oitavas de final 7",
+    "dayweek": "TER",
+    "data": "06/12/2022",
+    "hour": "12:00",
+    "stadium": "CIDADE DA EDUCAÇÃO",
+    "match": "1F x 2E",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 8,
+    "round": "Oitavas de final 8",
+    "dayweek": "TER",
+    "data": "06/12/2022",
+    "hour": "16:00",
+    "stadium": "NACIONAL DE LUSAIL",
+    "match": "1H x 2G",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 9,
+    "round": "Quartas de final 1",
+    "dayweek": "SEX",
+    "data": "09/12/2022",
+    "hour": "16:00",
+    "stadium": "NACIONAL DE LUSAIL",
+    "match": "Venc. O1 x Venc. O2",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 10,
+    "round": "Quartas de final 2",
+    "dayweek": "SEX",
+    "data": "09/12/2022",
+    "hour": "12:00",
+    "stadium": "CIDADE DA EDUCAÇÃO",
+    "match": "Venc. O3 x Venc. O4",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 11,
+    "round": "Quartas de final 3",
+    "dayweek": "SÁB",
+    "data": "10/12/2022",
+    "hour": "16:00",
+    "stadium": "AL KHOR",
+    "match": "Venc. O5 x Venc. O6",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 12,
+    "round": "Quartas de final 4",
+    "dayweek": "SÁB",
+    "data": "10/12/2022",
+    "hour": "12:00",
+    "stadium": "AL THUMAMA",
+    "match": "Venc. O7 x Venc. O8",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 13,
+    "round": "Semi final 1",
+    "dayweek": "TER",
+    "data": "13/12/2022",
+    "hour": "16:00",
+    "stadium": "NACIONAL DE LUSAIL",
+    "match": "Venc. Q1 x Venc. Q2",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 14,
+    "round": "Semi final 2",
+    "dayweek": "QUA",
+    "data": "14/12/2022",
+    "hour": "16:00",
+    "stadium": "AL KHOR",
+    "match": "Venc. Q3 x Venc. Q4",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 15,
+    "round": "Terceiro lugar",
+    "dayweek": "SÁB",
+    "data": "17/12/2022",
+    "hour": "12:00",
+    "stadium": "INTERNACIONAL KHALIFA",
+    "match": "Perd. S1 x Perd. S2",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  },
+  {
+    "id": 16,
+    "round": "Final",
+    "dayweek": "DOM",
+    "data": "18/12/2022",
+    "hour": "12:00",
+    "stadium": "NACIONAL DE LUSAIL",
+    "match": "Venc. S1 x Venc. S2",
+    "host": "bandeira_padrao.svg",
+    "visitor": "bandeira_padrao.svg"
+  }
+]

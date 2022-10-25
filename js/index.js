@@ -69,27 +69,27 @@ showGroups();
 
 /////////////////////////// GAMES ///////////////////////////
 let url = "";
-const listarJogos = (url) => {
-  return fetch(`jogos-${url}.json`).then((response) => response.json());
+const gameList = (url) => {
+  return fetch(`games-${url}.json`).then((response) => response.json());
 };
 
-const criarCardJogo = () => {
+const createGameCard = () => {
   let gameList = document.querySelector(".gameList").cloneNode(true);
   document.querySelector(".gamesTable").append(gameList);
   return gameList;
 };
 
-const preencherCardJogos = (lista, jogo, indice) => {
-  lista[indice].querySelector(".grupo").innerHTML = `Grupo ${jogo.grupo}`; // muda nas rounds finais
-  lista[indice].querySelector(
+const createGameCard_ = (list, game, index) => {
+  list[index].querySelector(".group").innerHTML = `Group ${game.group}`; // muda nas rounds finais
+  list[index].querySelector(
     ".data"
-  ).innerHTML = `${jogo.diaSemana} ${jogo.data} às ${jogo.hora}`;
-  lista[indice].querySelector(
-    ".partida"
-  ).innerHTML = `<img class="groupLogo" src="./images/logos/${jogo.mandante}" alt="" />
-    ${jogo.partida}
-    <img class="groupLogo" src="./images/logos/${jogo.visitante}" alt="" />`;
-  lista[indice].querySelector(".estadio").innerHTML = `${jogo.estadio}`;
+  ).innerHTML = `${game.dayweek} ${game.data} at ${game.hour}`;
+  list[index].querySelector(
+    ".match"
+  ).innerHTML = `<img class="groupLogo" src="./images/logos/${game.host}" alt="" />
+    ${game.match}
+    <img class="groupLogo" src="./images/logos/${game.visitor}" alt="" />`;
+  list[index].querySelector(".stadium").innerHTML = `${game.stadium}`;
 };
 
 const renderGames = (url) => {
@@ -97,50 +97,49 @@ const renderGames = (url) => {
   hide("#divFinals");
   hide("#divGroup");
 
-  listarJogos(url).then((dado) => {
-    document.querySelector(".round").innerHTML = `${dado[0].round}ª round`;
-    dado.map((jogo, indice) => {
-      preencherCardJogos(cardsrounds, jogo, indice);
+  gameList(url).then((data) => {
+    document.querySelector(".round").innerHTML = `${data[0].round}ª round`;
+    data.map((game, index) => {
+      createGameCard_(cardsrounds, game, index);
     });
   });
 };
 
-let numeroDeJogos = 16;
+let numberOfGames = 16;
 let cardsrounds = [];
 
-for (let i = 0; i < numeroDeJogos; i++) {
-  cardsrounds[i] = criarCardJogo();
+for (let i = 0; i < numberOfGames; i++) {
+  cardsrounds[i] = createGameCard();
 }
-// console.log(cardsrounds)
 
 renderGames(1);
 
 ///// ROUNDS ////
 
 ////////// FINALS /////////////
-const criarCard = (elemento, local) => {
-  let card = document.querySelector(elemento).cloneNode(true);
+const createCard = (element, local) => {
+  let card = document.querySelector(element).cloneNode(true);
   document.querySelector(local).append(card);
   return card;
 };
 
-const preencherCardJogosFinais = (lista, jogo, indice) => {
-  lista[indice].querySelector(".fase").innerHTML = `${jogo.round}`; // muda nas rounds finais
-  lista[indice].querySelector(
+const fillCardGamesFinals = (list, game, index) => {
+  list[index].querySelector(".fase").innerHTML = `${game.round}`; // muda nas rounds finais
+  list[index].querySelector(
     ".data"
-  ).innerHTML = `${jogo.diaSemana} ${jogo.data} às ${jogo.hora}`;
-  lista[indice].querySelector(
-    ".partida"
-  ).innerHTML = `<img class="groupLogo" src="./images/logos/${jogo.mandante}" alt="" />
-    ${jogo.partida}
-    <img class="groupLogo" src="./images/logos/${jogo.visitante}" alt="" />`;
-  lista[indice].querySelector(".estadio").innerHTML = `${jogo.estadio}`;
+  ).innerHTML = `${game.dayweek} ${game.data} at ${game.hour}`;
+  list[index].querySelector(
+    ".match"
+  ).innerHTML = `<img class="groupLogo" src="./images/logos/${game.host}" alt="" />
+    ${game.match}
+    <img class="groupLogo" src="./images/logos/${game.visitor}" alt="" />`;
+  list[index].querySelector(".stadium").innerHTML = `${game.stadium}`;
 };
 
-let numeroDeJogosFinais = 16;
-let cardsJogosFinais = [];
-for (let i = 0; i < numeroDeJogosFinais; i++) {
-  cardsJogosFinais[i] = criarCard(
+let numberOfGamesFinals = 16;
+let cardsGamesFinals = [];
+for (let i = 0; i < numberOfGamesFinals; i++) {
+  cardsGamesFinals[i] = createCard(
     ".gameFinals",
     ".gamesTableFinals"
   );
@@ -151,10 +150,9 @@ const renderFinals = (url) => {
   hide("#divRounds");
   hide("#divGroup");
 
-  listarJogos(url).then((dado) => {
-    dado.map((jogo, indice) => {
-      //preencherCardJogos(cardsrounds, jogo, indice)
-      preencherCardJogosFinais(cardsJogosFinais, jogo, indice);
+  gameList(url).then((data) => {
+    data.map((game, index) => {
+      fillCardGamesFinals(cardsGamesFinals, game, index);
     });
   });
 };
